@@ -11,8 +11,8 @@ class Producto_model extends Conexion
     }
 
     public function getDataProducto_Bodega(){ //Obtencion de datos relacionados entre la bodega y sus productos
-        $test = $this->Conexion->getCon();
-        $query = ('SELECT producto_bodega.cantidad, producto.nombre as producto, bodega.nombre as bodega
+
+        $query = $this->query('SELECT producto_bodega.cantidad, producto.nombre as producto, bodega.nombre as bodega
                                             FROM producto_bodega, producto, bodega
                                             WHERE producto.id_producto = producto_bodega.id_producto
                                             AND bodega.id_bodega = producto_bodega.id_bodega 

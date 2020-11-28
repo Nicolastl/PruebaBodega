@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84e3925c-7b9c-4b6d-9ce2-9a9350a0136c" name="Default Changelist" comment="" />
+    <list default="true" id="84e3925c-7b9c-4b6d-9ce2-9a9350a0136c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Producto_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Producto_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/raiz.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +16,11 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1kkwpSSWB8ixk8OBmTwqk68f2ac" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -20,8 +28,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lapirca.wenic.cl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
@@ -64,7 +73,8 @@
       <workItem from="1606335652742" duration="10023000" />
       <workItem from="1606349857084" duration="1472000" />
       <workItem from="1606401598530" duration="11869000" />
-      <workItem from="1606504631696" duration="6844000" />
+      <workItem from="1606504631696" duration="7889000" />
+      <workItem from="1606529804217" duration="936000" />
     </task>
     <servers />
   </component>
@@ -76,22 +86,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="722" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1606505002112" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1606526997619">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1606529658472">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606526997619" />
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606529658472" />
     <state x="593" y="211" key="NewPhpClassDialog" timestamp="1606526622530">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="593" y="211" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1606526622530" />
-    <state x="604" y="332" key="NewPhpFileDialog" timestamp="1606505251692">
+    <state x="604" y="332" key="NewPhpFileDialog" timestamp="1606529933162">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1606505251692" />
+    <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1606529933162" />
     <state x="277" y="55" key="SettingsEditor" timestamp="1606258095135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606258095135" />
+    <state x="696" y="95" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606530795687">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="696" y="95" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1606530795687" />
     <state x="792" y="123" width="629" height="568" key="find.popup" timestamp="1606527894199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
