@@ -1,6 +1,6 @@
 <?php
 
-include 'Conexion.php';
+require 'Conexion.php';
 class Producto_model extends Conexion
 {
 
@@ -27,7 +27,7 @@ class Producto_model extends Conexion
         return $retorno;
     }
     public function getDataProducto(){ //Obtener todos los productos
-        $query = $this->Conexion->query('SELECT * FROM producto WHERE producto.activo = 1');
+        $query = $this->con->query('SELECT * FROM producto WHERE producto.activo = 1');
         $retorno = [];
         $i=0;
         while ($fila = $query->fetch_assoc()){
@@ -37,7 +37,7 @@ class Producto_model extends Conexion
         return $retorno;
     }
     public function getProducto($id){ //Obtener producto por id
-        $query = $this->Conexion->query("SELECT * FROM producto WHERE producto.id_producto = '$id' ");
+        $query = $this->con->query("SELECT * FROM producto WHERE producto.id_producto = '$id' ");
         $retorno = [];
         $i=0;
         while ($fila = $query->fetch_assoc()){
@@ -47,7 +47,15 @@ class Producto_model extends Conexion
         return $retorno;
     }
     public function guardarProducto($nombre){ //Guardar Producto Nuevo
-        $query = $this->Conexion->query("INSERT INTO producto(nombre) VALUES ('$nombre')");
+        $query = $this->con->query("INSERT INTO producto(nombre) VALUES ('$nombre')");
+        return $query;
+    }
+    public function editarProducto($nombre,$id){ //Editar Producto, buscara cual es con su id
+        $query = $this->con->query("UPDATE producto SET nombre='$nombre' WHERE producto.id_producto='$id'");
+        return $query;
+    }
+    public function desactivarProducto($id){ //Desactiva un producto, para no borrar la data historica
+        $query = $this->con->query("UPDATE producto SET activo=0 WHERE producto.id_producto='$id'");
         return $query;
     }
 }

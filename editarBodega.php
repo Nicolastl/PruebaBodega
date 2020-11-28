@@ -1,6 +1,6 @@
 <?php
-require('Model/Conexion.php');
-$con = new Conexion();
+require('Model/Bodega_model.php');
+$bod = new Bodega_model();
 $id = $_GET['id'];
-$datosBodega = $con->getBodega($id);
+$datosBodega = $bod->getBodega($id);
 require('Views/editBodega.php');

@@ -1,6 +1,6 @@
 <?php
-require('Model/Conexion.php');
-$conex = new Conexion();
+require('Model/Producto_bodega_model.php');
+$conex = new Producto_bodega_model();
 
 $cantidad =  $_POST['cantidad'];
 $productos = $_POST['id_producto'];

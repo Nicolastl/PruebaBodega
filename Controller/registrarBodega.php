@@ -1,11 +1,11 @@
 <?php
-require('Model/Conexion.php');
-$con = new Conexion();
+require('Model/Bodega_model.php');
+$bod = new Bodega_model();
 if(isset($_POST['envio'])){
     if(strlen ($_POST['nombre']) >= 1){
         $nombre = trim($_POST['nombre']);
 
-        $resultado = $con->guardarBodega($nombre);
+        $resultado = $bod->guardarBodega($nombre);
         if($resultado){
             echo '<h3 class="ok"> Envio Correcto</h3>';
         }else{

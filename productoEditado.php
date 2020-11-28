@@ -1,6 +1,6 @@
 <?php
-require('Model/Conexion.php');
-$conex = new Conexion();
+require('Model/Producto_model.php');
+$conex = new Producto_model();
 if(isset($_POST['envio'])){
     if(strlen ($_POST['nombre']) >= 1){
         $nombre = trim($_POST['nombre']);

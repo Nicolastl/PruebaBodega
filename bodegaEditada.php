@@ -1,12 +1,12 @@
 <?php
-require('Model/Conexion.php');
-$conex = new Conexion();
+require('Model/Bodega_model.php');
+$bod = new Bodega_model();
 if(isset($_POST['envio'])){
     if(strlen ($_POST['nombre']) >= 1){
         $nombre = trim($_POST['nombre']);
         $id = trim($_POST['id']);
 
-        $resultado = $conex->editarBodega($nombre,$id);
+        $resultado = $bod->editarBodega($nombre,$id);
         if($resultado){
             echo '<h3 class="ok"> Edicion Correcta</h3>';
         }else{
