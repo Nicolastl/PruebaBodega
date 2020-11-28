@@ -1,6 +1,6 @@
 <?php
 
-
+include 'Conexion.php';
 class Producto_model extends Conexion
 {
 
@@ -8,11 +8,10 @@ class Producto_model extends Conexion
 
         parent::__construct();
 
+
     }
-
     public function getDataProducto_Bodega(){ //Obtencion de datos relacionados entre la bodega y sus productos
-
-        $query = $this->query('SELECT producto_bodega.cantidad, producto.nombre as producto, bodega.nombre as bodega
+        $query = $this->con->query('SELECT producto_bodega.cantidad, producto.nombre as producto, bodega.nombre as bodega
                                             FROM producto_bodega, producto, bodega
                                             WHERE producto.id_producto = producto_bodega.id_producto
                                             AND bodega.id_bodega = producto_bodega.id_bodega 
@@ -49,10 +48,6 @@ class Producto_model extends Conexion
     }
     public function guardarProducto($nombre){ //Guardar Producto Nuevo
         $query = $this->Conexion->query("INSERT INTO producto(nombre) VALUES ('$nombre')");
-        return $query;
-    }
-    public function editarProducto($nombre,$id){ //Editar Producto, buscara cual es con su id
-        $query = $this->getCon()->query("UPDATE producto SET nombre='$nombre' WHERE producto.id_producto='$id'");
         return $query;
     }
 }

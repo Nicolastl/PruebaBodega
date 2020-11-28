@@ -1,15 +1,11 @@
 <?php
 class Conexion{
-    public $con;
+    protected $con;
     public function __construct() // Crear Conexion con la base de datos
     {
         $this->con = new mysqli('localhost', 'root','','prueba_bodega'); //Probar en localhost con estos parametros, en caso de que sean probados en otra cuenta, verificar, desconozco la data del computador donde se probara
     }
 
-    public function getCon(){
-        $conexion = $this->con;
-        return $conexion;
-    }
     public function getDataBodega(){ //Obtener todas las bodegas
         $query = $this->con->query('SELECT * FROM bodega WHERE bodega.activo = 1');
         $retorno = [];
@@ -31,20 +27,26 @@ class Conexion{
         }
         return $retorno;
     }
-
+    public function guardarProducto($nombre){ //Guardar Producto Nuevo
+        $query = $this->con->query("INSERT INTO producto(nombre) VALUES ('$nombre')");
+        return $query;
+    }
 
     public function guardarBodega($nombre){//Guardar Bodega Nueva
         $query = $this->con->query("INSERT INTO bodega(nombre) VALUES ('$nombre')");
         return $query;
     }
-
+    public function editarProducto($nombre,$id){ //Editar Producto, buscara cual es con su id
+        $query = $this->con->query("UPDATE producto SET nombre='$nombre' WHERE producto.id_producto='$id'");
+        return $query;
+    }
     public function editarBodega($nombre,$id){ //Editar Bodega, buscara cual es con su id
         $query = $this->con->query("UPDATE bodega SET nombre='$nombre' WHERE bodega.id_bodega='$id'");
         return $query;
     }
     public function desactivarProducto($id){ //Desactiva un producto, para no borrar la data historica
-    $query = $this->con->query("UPDATE producto SET activo=0 WHERE producto.id_producto='$id'");
-    return $query;
+        $query = $this->con->query("UPDATE producto SET activo=0 WHERE producto.id_producto='$id'");
+        return $query;
     }
     public function desactivarBodega($id){ //Desactiva una bodega, para no borrar la data historica
         $query = $this->con->query("UPDATE bodega SET activo=0 WHERE bodega.id_bodega='$id'");
